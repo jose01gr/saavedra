@@ -1,32 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>General Venequian Motors</title>
 </head>
 <body>
-    <header>
-        <img src="" alt="logo">
-        <h1>General Motors venequian</h1>
-    </header>
-    <main>
-        <section id="button-menu">
-            <h2>Eliga una opcion</h2>
-            <button class="buttons" id="button-create">Crear Entrada</button>
-            <button class="buttons" id="button-view">Ver Listas</button>
-        </section>
-        <section id="Formulary">
-            <form id="register-form">
-                <label for="nombre">Nombre Y Apellido</label>
-                <input type="text" id="name" required><br>
-                <label for="placa"> Placa </label>
-                <input type="text" id="placa" required><br>
-                <label for="color"> Color del Vehiculo: </label>
-                
-            </form>
-        </section>
-    </main>
-    
+    <h1>General Venequian Motors</h1>
+    <form id="vehicleForm">
+        <h2>Datos del dueño</h2>
+        <label>Nombre: <input type="text" id="ownerName" required></label><br>
+        <label>Apellido: <input type="text" id="ownerSurname" required></label><br>
+        <label>Cédula: <input type="number" id="ownerId" required></label><br>
+        <label>Teléfono: <input type="number" id="ownerPhone" required></label><br>
+        <label>Dirección: <input type="text" id="ownerAddress" required></label><br>
+        <h2>Datos del vehículo</h2>
+        <label>Placa: <input type="text" id="vehiclePlate" required></label><br>
+        <label>Brand: 
+            <select id="vehicleBrand" required>
+                <option value="">Select a brand</option>
+                <option value="Brand1">Marca1</option>
+                <option value="Brand2">Marca2</option>
+                <option value="Brand3">Marca3</option>
+                <option value="Brand4">Marca4</option>
+                <option value="Brand5">Marca5</option>
+            </select>
+        </label><br>
+        <label>Model: 
+            <select id="vehicleModel" required>
+                <option value="">Select a model</option>
+            </select>
+        </label><br>
+        <label>Año del vehículo: <input type="number" id="vehicleYear" required></label><br>
+        <label>Color: <input type="color" id="vehicleColor" required></label><br>
+        <input type="submit" value="Registrar">
+    </form>
+    <table id="vehicleTable">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Cédula</th>
+                <th>Teléfono</th>
+                <th>Dirección</th>
+                <th>Placa</th>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Año</th>
+                <th>Color</th>
+                <th>Editar</th>
+            </tr>
+        </thead>
+        <tbody id="vehicleTbody">
+        </tbody>
+    </table>
+    <script src="crud.js"></script>
 </body>
 </html>
