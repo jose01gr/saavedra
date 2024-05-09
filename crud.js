@@ -1,5 +1,6 @@
+
 class Vehicle {
-    constructor(ownerName, ownerSurname, ownerId, ownerPhone, ownerAddress, vehiclePlate, vehicleBrand, vehicleModel, vehicleYear, vehicleColor) {
+    constructor(ownerName, ownerSurname, ownerId, ownerPhone, ownerAddress, vehiclePlate, vehicleBrand, vehicleModel, vehicleYear, vehicleColor, vehiclePic) {
         this.ownerName = ownerName;
         this.ownerSurname = ownerSurname;
         this.ownerId = ownerId;
@@ -10,6 +11,7 @@ class Vehicle {
         this.vehicleModel = vehicleModel;
         this.vehicleYear = vehicleYear;
         this.vehicleColor = vehicleColor;
+        this.vehiclePic = vehiclePic
     }
 }
 
@@ -46,6 +48,10 @@ class VehicleRegistry {
             editButton.textContent = 'Editar';
             editButton.addEventListener('click', () => this.editVehiclePrompt(index));
             tr.appendChild(editButton);
+            const deleteButton = document.createElement('button');
+            editButton.textContent = 'Borrar';
+            editButton.addEventListener('click', () => this.deleteVehicle(index));
+            tr.appendChild(deleteButton);
             vehicleTbody.appendChild(tr);
         });
     }
