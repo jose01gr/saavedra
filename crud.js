@@ -88,34 +88,34 @@ class VehicleRegistry {
     }
 }
 
-var brandModelMap = {
-    "Marca1": ["Modelo1", "Modelo2", "Modelo3"],
-    "Marca2": ["Modelo4", "Modelo5", "Modelo6"],
-    "Marca3": ["Modelo7", "Modelo8", "Modelo9"],
-    "Marca4": ["Modelo10", "Modelo11", "Modelo12"],
-    "Marca5": ["Modelo13", "Modelo14", "Modelo15"]
-};
+// var brandModelMap = {
+//     "Marca1": ["Modelo1", "Modelo2", "Modelo3"],
+//     "Marca2": ["Modelo4", "Modelo5", "Modelo6"],
+//     "Marca3": ["Modelo7", "Modelo8", "Modelo9"],
+//     "Marca4": ["Modelo10", "Modelo11", "Modelo12"],
+//     "Marca5": ["Modelo13", "Modelo14", "Modelo15"]
+// };
 
 
-function updateModelOptions() {
-    var brand = document.getElementById("vehicleBrand").value;
-    var modelSelect = document.getElementById("vehicleModel");
-    modelSelect.innerHTML = ""; // Clear existing options
+// function updateModelOptions() {
+//     var brand = document.getElementById("vehicleBrand").value;
+//     var modelSelect = document.getElementById("vehicleModel");
+//     modelSelect.innerHTML = ""; // Clear existing options
 
 
-    var models = brandModelMap[brand] ? brandModelMap[brand] : [];
+//     var models = brandModelMap[brand] ? brandModelMap[brand] : [];
 
-    const optionsHTML = models.map(model => `<option value="${model}">${model}</option>`).join("");
-    modelSelect.innerHTML = optionsHTML;
-}
+//     const optionsHTML = models.map(model => `<option value="${model}">${model}</option>`).join("");
+//     modelSelect.innerHTML = optionsHTML;
+// }
 
-// Add a change event to the brand field to update model options
-document.getElementById("vehicleBrand").addEventListener("change", updateModelOptions);
+// // Add a change event to the brand field to update model options
+// document.getElementById("vehicleBrand").addEventListener("change", updateModelOptions);
 
-const vehicleRegistry = new VehicleRegistry();
+// const vehicleRegistry = new VehicleRegistry();
 
-document.getElementById('vehicleForm').addEventListener('submit', (event) => {
-    event.preventDefault();
-    vehicleRegistry.addVehicle(vehicleRegistry.getVehicleFromForm());
-    event.target.reset();
-});
+// document.getElementById('vehicleForm').addEventListener('submit', (event) => {
+//     event.preventDefault();
+//     vehicleRegistry.addVehicle(vehicleRegistry.getVehicleFromForm());
+//     event.target.reset();
+// });
